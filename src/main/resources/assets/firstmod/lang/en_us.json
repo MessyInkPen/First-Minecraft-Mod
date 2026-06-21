@@ -1,5 +1,11 @@
 {
   "item.firstmod.fluorite": "Fluorite",
   "item.firstmod.raw_fluorite": "Raw Fluorite",
+
+  "block.firstmod.fluorite_block": "Block of Fluorite",
+  "block.firstmod.raw_fluorite_block": "Block of Raw Fluorite",
+  "block.firstmod.fluorite_ore": "Fluorite Ore",
+  "block.firstmod.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
+
   "creativemodetab.firstmod.mod_items": "Mod Items"
 }

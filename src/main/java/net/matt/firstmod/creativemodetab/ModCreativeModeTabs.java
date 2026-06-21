@@ -2,6 +2,7 @@ package net.matt.firstmod.creativemodetab;
 
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.matt.firstmod.FirstMod;
+import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.item.ModItems;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -18,6 +19,10 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.FLUORITE);
                         output.accept(ModItems.RAW_FLUORITE);
+                        output.accept(ModBlocks.FLUORITE_BLOCK);
+                        output.accept(ModBlocks.RAW_FLUORITE_BLOCK);
+                        output.accept(ModBlocks.FLUORITE_ORE);
+                        output.accept(ModBlocks.FLUORITE_DEEPSLATE_ORE);
                     }).build());
 
 
