@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_FLUORITE_BLOCK);
                         output.accept(ModBlocks.FLUORITE_ORE);
                         output.accept(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+                        output.accept(ModItems.CHISEL);
                     }).build());
 
 
