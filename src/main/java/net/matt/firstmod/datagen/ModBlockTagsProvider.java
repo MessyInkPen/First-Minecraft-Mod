@@ -19,7 +19,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.FLUORITE_BLOCK)
                 .add(ModBlocks.RAW_FLUORITE_BLOCK)
                 .add(ModBlocks.FLUORITE_ORE)
-                .add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+                .add(ModBlocks.FLUORITE_DEEPSLATE_ORE)
+                .add(ModBlocks.MAGIC_BLOCK);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLUORITE_ORE)

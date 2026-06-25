@@ -24,6 +24,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FLUORITE_ORE);
                         output.accept(ModBlocks.FLUORITE_DEEPSLATE_ORE);
                         output.accept(ModItems.CHISEL);
+                        output.accept(ModBlocks.MAGIC_BLOCK);
+                        output.accept(ModItems.STRAWBERRY);
                     }).build());
 
 

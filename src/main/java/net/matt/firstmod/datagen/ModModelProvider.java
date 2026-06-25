@@ -19,12 +19,16 @@ public class ModModelProvider extends FabricModelProvider{
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_FLUORITE_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.MAGIC_BLOCK);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.FLUORITE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RAW_FLUORITE, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ModItems.CHISEL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STRAWBERRY, ModelTemplates.FLAT_ITEM);
     }
 }

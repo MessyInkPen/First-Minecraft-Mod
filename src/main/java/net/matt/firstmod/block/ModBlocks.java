@@ -1,6 +1,7 @@
 package net.matt.firstmod.block;
 
 import net.matt.firstmod.FirstMod;
+import net.matt.firstmod.block.custom.MagicBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -32,6 +33,10 @@ public class ModBlocks {
     public static final Block FLUORITE_DEEPSLATE_ORE = registerBlock("fluorite_deepslate_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 5), properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            properties -> new MagicBlock(properties.strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
