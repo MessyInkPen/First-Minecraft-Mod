@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.creativemodetab.ModCreativeModeTabs;
 import net.matt.firstmod.item.ModItems;
+import net.matt.firstmod.registries.ModFuels;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,6 @@ public class FirstMod implements ModInitializer {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModFuels.registerFuels();
 	}
 }
