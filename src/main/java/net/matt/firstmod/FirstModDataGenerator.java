@@ -2,10 +2,7 @@ package net.matt.firstmod;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.matt.firstmod.datagen.ModBlockLootTableProvider;
-import net.matt.firstmod.datagen.ModBlockTagsProvider;
-import net.matt.firstmod.datagen.ModModelProvider;
-import net.matt.firstmod.datagen.ModRecipeProvider;
+import net.matt.firstmod.datagen.*;
 
 public class FirstModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -16,5 +13,6 @@ public class FirstModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModItemTagsProvider::new);
 	}
 }
