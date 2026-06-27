@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MAGIC_BLOCK);
                         output.accept(ModItems.STRAWBERRY);
                         output.accept(ModItems.COMBUSTIBLE_SPORES);
+                        output.accept(ModBlocks.FLUORITE_STAIRS);
+                        output.accept(ModBlocks.FLUORITE_SLAB);
                     }).build());
 
 

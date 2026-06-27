@@ -11,6 +11,9 @@
   "block.firstmod.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
   "block.firstmod.magic_block": "Magic Block",
 
+  "block.firstmod.fluorite_stairs": "Fluorite Stairs",
+  "block.firstmod.fluorite_slab": "Fluorite Slab",
+
   "creativemodetab.firstmod.mod_items": "Mod Items",
 
   "tooltip.firstmod.chisel": "Press §eShift§r for more information!",

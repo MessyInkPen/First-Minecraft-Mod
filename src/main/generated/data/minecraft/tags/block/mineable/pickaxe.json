@@ -4,6 +4,8 @@
     "firstmod:raw_fluorite_block",
     "firstmod:fluorite_ore",
     "firstmod:fluorite_deepslate_ore",
-    "firstmod:magic_block"
+    "firstmod:magic_block",
+    "firstmod:fluorite_stairs",
+    "firstmod:fluorite_slab"
   ]
 }

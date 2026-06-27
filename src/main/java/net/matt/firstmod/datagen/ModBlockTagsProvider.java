@@ -20,10 +20,15 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.RAW_FLUORITE_BLOCK)
                 .add(ModBlocks.FLUORITE_ORE)
                 .add(ModBlocks.FLUORITE_DEEPSLATE_ORE)
-                .add(ModBlocks.MAGIC_BLOCK);
+                .add(ModBlocks.MAGIC_BLOCK)
+                .add(ModBlocks.FLUORITE_STAIRS)
+                .add(ModBlocks.FLUORITE_SLAB);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLUORITE_ORE)
                 .add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+
+        valueLookupBuilder(BlockTags.STAIRS).add(ModBlocks.FLUORITE_STAIRS);
+        valueLookupBuilder(BlockTags.SLABS).add(ModBlocks.FLUORITE_SLAB) ;
     }
 }
