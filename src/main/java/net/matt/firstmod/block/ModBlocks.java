@@ -16,6 +16,10 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -47,6 +51,14 @@ public class ModBlocks {
 
     public static final Block FLUORITE_SLAB = registerBlock("fluorite_slab",
             properties -> new SlabBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+
+    public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 20, properties.strength(3f).noCollision()));
+
+    public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
+                properties -> new PressurePlateBlock(BlockSetType.IRON,
+                        properties.mapColor(MapColor.COLOR_PURPLE).forceSolidOn().instrument(NoteBlockInstrument.BASS)
+                                .noCollision().strength(0.5f).pushReaction(PushReaction.DESTROY)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name))));

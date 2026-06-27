@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "fluorite",
+  "ingredients": [
+    "firstmod:fluorite"
+  ],
+  "result": {
+    "id": "firstmod:fluorite_button"
+  }
+}

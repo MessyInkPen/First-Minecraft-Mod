@@ -29,6 +29,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.COMBUSTIBLE_SPORES);
                         output.accept(ModBlocks.FLUORITE_STAIRS);
                         output.accept(ModBlocks.FLUORITE_SLAB);
+                        output.accept(ModBlocks.FLUORITE_BUTTON);
+                        output.accept(ModBlocks.FLUORITE_PRESSURE_PLATE);
                     }).build());
 
 
