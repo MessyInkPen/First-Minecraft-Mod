@@ -69,8 +69,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE, ModBlocks.FLUORITE_BLOCK);
 
+                fenceBuilder(ModBlocks.FLUORITE_FENCE, Ingredient.of(ModBlocks.FLUORITE_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.FLUORITE_BLOCK), has(ModBlocks.FLUORITE_BLOCK))
+                        .group("fluorite")
+                        .save(output);
 
-           }
+                fenceBuilder(ModBlocks.FLUORITE_FENCE_GATE, Ingredient.of(ModBlocks.FLUORITE_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.FLUORITE_BLOCK), has(ModBlocks.FLUORITE_BLOCK))
+                        .group("fluorite")
+                        .save(output);
+
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLUORITE_WALL, ModBlocks.FLUORITE_BLOCK);
+
+            }
         };
     }
 

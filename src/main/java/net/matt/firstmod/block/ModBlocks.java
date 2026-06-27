@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
@@ -59,6 +60,13 @@ public class ModBlocks {
                 properties -> new PressurePlateBlock(BlockSetType.IRON,
                         properties.mapColor(MapColor.COLOR_PURPLE).forceSolidOn().instrument(NoteBlockInstrument.BASS)
                                 .noCollision().strength(0.5f).pushReaction(PushReaction.DESTROY)));
+
+    public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
+                    properties -> new FenceBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+    public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
+                        properties -> new FenceGateBlock(WoodType.ACACIA , properties.strength(3f).requiresCorrectToolForDrops()));
+    public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
+                        properties -> new WallBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name))));

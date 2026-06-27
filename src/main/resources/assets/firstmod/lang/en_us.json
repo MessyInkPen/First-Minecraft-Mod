@@ -15,6 +15,9 @@
   "block.firstmod.fluorite_slab": "Fluorite Slab",
   "block.firstmod.fluorite_button": "Fluorite Button",
   "block.firstmod.fluorite_pressure_plate": "Fluorite Pressure Plate",
+  "block.firstmod.fluorite_fence": "Fluorite Fence",
+  "block.firstmod.fluorite_fence_gate": "Fluorite Fence Gate",
+  "block.firstmod.fluorite_wall": "Fluorite Wall",
 
   "creativemodetab.firstmod.mod_items": "Mod Items",
 
