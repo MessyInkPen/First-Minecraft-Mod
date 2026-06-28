@@ -81,6 +81,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLUORITE_WALL, ModBlocks.FLUORITE_BLOCK);
 
+                doorBuilder(ModBlocks.FLUORITE_DOOR, Ingredient.of(ModBlocks.FLUORITE_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.FLUORITE_BLOCK), has(ModBlocks.FLUORITE_BLOCK))
+                        .group("fluorite")
+                        .save(output);
+
+                doorBuilder(ModBlocks.FLUORITE_TRAPDOOR, Ingredient.of(ModItems.FLUORITE))
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .group("fluorite")
+                        .save(output);
             }
         };
     }

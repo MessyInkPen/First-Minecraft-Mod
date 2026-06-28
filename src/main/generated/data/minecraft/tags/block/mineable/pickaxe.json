@@ -6,6 +6,11 @@
     "firstmod:fluorite_deepslate_ore",
     "firstmod:magic_block",
     "firstmod:fluorite_stairs",
-    "firstmod:fluorite_slab"
+    "firstmod:fluorite_slab",
+    "firstmod:fluorite_fence",
+    "firstmod:fluorite_fence_gate",
+    "firstmod:fluorite_wall",
+    "firstmod:fluorite_door",
+    "firstmod:fluorite_trapdoor"
   ]
 }

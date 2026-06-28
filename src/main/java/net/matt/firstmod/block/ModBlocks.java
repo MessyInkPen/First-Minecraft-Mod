@@ -64,9 +64,17 @@ public class ModBlocks {
     public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
                     properties -> new FenceBlock(properties.strength(3f).requiresCorrectToolForDrops()));
     public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
-                        properties -> new FenceGateBlock(WoodType.ACACIA , properties.strength(3f).requiresCorrectToolForDrops()));
+                        properties -> new FenceGateBlock(WoodType.ACACIA, properties.strength(3f).requiresCorrectToolForDrops()));
     public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
                         properties -> new WallBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+
+    public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
+                        properties -> new DoorBlock(BlockSetType.IRON, properties.strength(3f)
+                                .requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final Block FLUORITE_TRAPDOOR= registerBlock("fluorite_trapdoor",
+                            properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(3f)
+                                    .requiresCorrectToolForDrops().noOcclusion()));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name))));
