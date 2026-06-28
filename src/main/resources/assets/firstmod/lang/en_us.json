@@ -5,6 +5,13 @@
   "item.firstmod.strawberry": "Strawberry",
   "item.firstmod.combustible_spores": "Combustible Spores",
 
+  "item.firstmod.fluorite_sword": "Fluorite Sword",
+  "item.firstmod.fluorite_pickaxe": "Fluorite Pickaxe",
+  "item.firstmod.fluorite_shovel": "Fluorite Shovel",
+  "item.firstmod.fluorite_axe": "Fluorite Axe",
+  "item.firstmod.fluorite_hoe": "Fluorite Hoe",
+  "item.firstmod.fluorite_spear": "Fluorite Spear",
+
   "block.firstmod.fluorite_block": "Block of Fluorite",
   "block.firstmod.raw_fluorite_block": "Block of Raw Fluorite",
   "block.firstmod.fluorite_ore": "Fluorite Ore",

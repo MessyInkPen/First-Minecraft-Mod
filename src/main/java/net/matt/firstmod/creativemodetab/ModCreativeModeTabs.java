@@ -36,6 +36,12 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.FLUORITE_WALL);
                        output.accept(ModBlocks.FLUORITE_DOOR);
                        output.accept(ModBlocks.FLUORITE_TRAPDOOR);
+                       output.accept(ModItems.FLUORITE_SWORD);
+                       output.accept(ModItems.FLUORITE_PICKAXE);
+                       output.accept(ModItems.FLUORITE_SHOVEL);
+                       output.accept(ModItems.FLUORITE_AXE);
+                       output.accept(ModItems.FLUORITE_HOE);
+                       output.accept(ModItems.FLUORITE_SPEAR);
                     }).build());
 
 
