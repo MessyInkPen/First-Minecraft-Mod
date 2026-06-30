@@ -31,17 +31,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FLUORITE_SLAB);
                         output.accept(ModBlocks.FLUORITE_BUTTON);
                         output.accept(ModBlocks.FLUORITE_PRESSURE_PLATE);
-                       output.accept(ModBlocks.FLUORITE_FENCE);
-                       output.accept(ModBlocks.FLUORITE_FENCE_GATE);
-                       output.accept(ModBlocks.FLUORITE_WALL);
-                       output.accept(ModBlocks.FLUORITE_DOOR);
-                       output.accept(ModBlocks.FLUORITE_TRAPDOOR);
-                       output.accept(ModItems.FLUORITE_SWORD);
-                       output.accept(ModItems.FLUORITE_PICKAXE);
+                        output.accept(ModBlocks.FLUORITE_FENCE);
+                        output.accept(ModBlocks.FLUORITE_FENCE_GATE);
+                        output.accept(ModBlocks.FLUORITE_WALL);
+                        output.accept(ModBlocks.FLUORITE_DOOR);
+                        output.accept(ModBlocks.FLUORITE_TRAPDOOR);
+                        output.accept(ModItems.FLUORITE_SWORD);
+                        output.accept(ModItems.FLUORITE_PICKAXE);
                        output.accept(ModItems.FLUORITE_SHOVEL);
                        output.accept(ModItems.FLUORITE_AXE);
                        output.accept(ModItems.FLUORITE_HOE);
                        output.accept(ModItems.FLUORITE_SPEAR);
+                       output.accept(ModItems.FLUORITE_HELMET);
+                       output.accept(ModItems.FLUORITE_CHESTPLATE);
+                       output.accept(ModItems.FLUORITE_LEGGINGS);
+                       output.accept(ModItems.FLUORITE_BOOTS);
                     }).build());
 
 

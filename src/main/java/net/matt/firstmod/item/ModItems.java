@@ -12,6 +12,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -55,6 +56,21 @@ public class ModItems {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name)))));
     }
+
+
+    public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorType.HELMET)));
+
+    public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+
+    public static final Item FLUORITE_LEGGINGS= registerItem("fluorite_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+
+    public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
+
+
 
     public static void registerModItems() {
         FirstMod.LOGGER.info("Registering Mod items for " + FirstMod.MOD_ID);
