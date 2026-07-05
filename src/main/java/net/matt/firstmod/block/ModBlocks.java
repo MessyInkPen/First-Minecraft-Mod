@@ -1,6 +1,7 @@
 package net.matt.firstmod.block;
 
 import net.matt.firstmod.FirstMod;
+import net.matt.firstmod.block.custom.FluoriteLampBlock;
 import net.matt.firstmod.block.custom.MagicBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -75,6 +76,11 @@ public class ModBlocks {
     public static final Block FLUORITE_TRAPDOOR= registerBlock("fluorite_trapdoor",
                             properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(3f)
                                     .requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final Block FLUORITE_LAMP = registerBlock("fluorite_lamp",
+            properties -> new FluoriteLampBlock(properties.strength(3f)
+                    .requiresCorrectToolForDrops().lightLevel(state
+                            -> state.getValue(FluoriteLampBlock.CLICKED) ? 15 : 0)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name))));

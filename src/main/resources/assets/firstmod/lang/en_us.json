@@ -35,6 +35,8 @@
   "block.firstmod.fluorite_door": "Fluorite Door",
   "block.firstmod.fluorite_trapdoor": "Fluorite Trapdoor",
 
+  "block.firstmod.fluorite_lamp": "Fluorite Lamp",
+
   "creativemodetab.firstmod.mod_items": "Mod Items",
 
   "tooltip.firstmod.chisel": "Press §eShift§r for more information!",

@@ -44,7 +44,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.FLUORITE_WALL);
         dropSelf(ModBlocks.FLUORITE_TRAPDOOR);
 
+
         add(ModBlocks.FLUORITE_DOOR, this::createDoorTable);
+
+        dropSelf(ModBlocks.FLUORITE_LAMP);
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {
