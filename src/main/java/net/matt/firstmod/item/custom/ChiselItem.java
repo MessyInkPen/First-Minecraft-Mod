@@ -1,9 +1,12 @@
 package net.matt.firstmod.item.custom;
 
 import net.matt.firstmod.block.ModBlocks;
+import net.matt.firstmod.data.ModDataComponents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -30,6 +33,15 @@ public class ChiselItem extends Item {
     }
 
     @Override
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
+        if (player.isCrouching()) {
+            player.getMainHandItem().remove(ModDataComponents.COORDINATES);
+            return InteractionResult.SUCCESS;
+        }
+        return super.use(level, player, hand);
+    }
+
+    @Override
     public InteractionResult useOn(UseOnContext context) {
         // Right Click Block to change from A to B
         Level level = context.getLevel();
@@ -39,6 +51,8 @@ public class ChiselItem extends Item {
             // We are on the Server!
             level.setBlockAndUpdate(context.getClickedPos(), CHISEL_MAP.get(clickedBlock).defaultBlockState());
              context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
+
+             context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
         }
 
         return InteractionResult.SUCCESS;
@@ -50,6 +64,10 @@ public class ChiselItem extends Item {
             builder.accept(Component.translatable("tooltip.firstmod.chisel.shift_down"));
         } else {
             builder.accept(Component.translatable("tooltip.firstmod.chisel"));
+        }
+
+        if (itemStack.has(ModDataComponents.COORDINATES)) {
+            builder.accept(Component.literal("Last Block chiseled at " + itemStack.get(ModDataComponents.COORDINATES)));
         }
 
         super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
