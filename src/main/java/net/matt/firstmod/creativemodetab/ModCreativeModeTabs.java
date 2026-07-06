@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                        output.accept(ModItems.FLUORITE_HORSE_ARMOR);
                        output.accept(ModBlocks.FLUORITE_LAMP);
                        output.accept(ModItems.KAUPEN_BOW);
+                       output.accept(ModItems.SCULKBEAM_STAFF);
                     }).build());
 
 

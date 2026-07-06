@@ -76,6 +76,9 @@ public class ModItems {
     public static final Item KAUPEN_BOW = registerItem("kaupen_bow",
                 properties -> new BowItem(properties.durability(500)));
 
+    public static final Item SCULKBEAM_STAFF = registerItem("sculkbeam_staff",
+            properties -> new BowItem(properties.stacksTo(1)));
+
 
 
     public static void registerModItems() {
