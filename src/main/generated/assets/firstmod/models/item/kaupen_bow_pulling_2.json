@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "firstmod:item/kaupen_bow_pulling_2"
+  }
+}
