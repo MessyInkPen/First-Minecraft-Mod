@@ -50,6 +50,7 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.FLUORITE_LAMP);
                        output.accept(ModItems.KAUPEN_BOW);
                        output.accept(ModItems.SCULKBEAM_STAFF);
+                       output.accept(ModBlocks.PEDISTAL_BLOCK);
                     }).build());
 
 

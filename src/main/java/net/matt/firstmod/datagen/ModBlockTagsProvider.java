@@ -29,7 +29,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.FLUORITE_FENCE_GATE)
                 .add(ModBlocks.FLUORITE_WALL)
                 .add(ModBlocks.FLUORITE_DOOR)
-                .add(ModBlocks.FLUORITE_TRAPDOOR);
+                .add(ModBlocks.FLUORITE_TRAPDOOR)
+                .add(ModBlocks.PEDISTAL_BLOCK);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLUORITE_ORE)

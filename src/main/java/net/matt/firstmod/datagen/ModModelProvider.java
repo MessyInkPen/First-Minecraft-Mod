@@ -58,6 +58,8 @@ public class ModModelProvider extends FabricModelProvider{
                 .with(BlockModelGenerators.createBooleanModelDispatch(FluoriteLampBlock.CLICKED,
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOnIdentifier)).build()),
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOffIdentifier)).build()))));
+
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.PEDISTAL_BLOCK);
     }
 
     @Override

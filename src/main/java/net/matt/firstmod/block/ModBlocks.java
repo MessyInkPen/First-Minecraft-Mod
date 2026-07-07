@@ -3,6 +3,7 @@ package net.matt.firstmod.block;
 import net.matt.firstmod.FirstMod;
 import net.matt.firstmod.block.custom.FluoriteLampBlock;
 import net.matt.firstmod.block.custom.MagicBlock;
+import net.matt.firstmod.block.custom.PedestalBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -81,6 +82,9 @@ public class ModBlocks {
             properties -> new FluoriteLampBlock(properties.strength(3f)
                     .requiresCorrectToolForDrops().lightLevel(state
                             -> state.getValue(FluoriteLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final Block PEDISTAL_BLOCK = registerBlock("pedestal",
+                properties -> new PedestalBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name))));
