@@ -1,0 +1,13 @@
+{
+  "asset_id": "firstmod:world",
+  "author": {
+    "color": "gray",
+    "translate": "painting.firstmod.world.author"
+  },
+  "height": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.firstmod.world.title "
+  },
+  "width": 2
+}
