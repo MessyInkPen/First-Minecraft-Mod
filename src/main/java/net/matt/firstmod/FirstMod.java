@@ -7,6 +7,7 @@ import net.matt.firstmod.creativemodetab.ModCreativeModeTabs;
 import net.matt.firstmod.data.ModDataComponents;
 import net.matt.firstmod.item.ModItems;
 import net.matt.firstmod.registries.ModFuels;
+import net.matt.firstmod.stat.ModStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +22,6 @@ public class FirstMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModFuels.registerFuels();
 		ModDataComponents.registerDataComponents();
+		ModStats.registerStats();
 	}
 }
