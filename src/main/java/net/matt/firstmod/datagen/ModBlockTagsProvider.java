@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.references.BlockIds;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 
@@ -17,46 +18,46 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.FLUORITE_BLOCK)
-                .add(ModBlocks.RAW_FLUORITE_BLOCK)
-                .add(ModBlocks.FLUORITE_ORE)
-                .add(ModBlocks.FLUORITE_DEEPSLATE_ORE)
-                .add(ModBlocks.MAGIC_BLOCK)
-                .add(ModBlocks.FLUORITE_STAIRS)
-                .add(ModBlocks.FLUORITE_SLAB)
-                .add(ModBlocks.FLUORITE_FENCE)
-                .add(ModBlocks.FLUORITE_FENCE_GATE)
-                .add(ModBlocks.FLUORITE_WALL)
-                .add(ModBlocks.FLUORITE_DOOR)
-                .add(ModBlocks.FLUORITE_TRAPDOOR)
-                .add(ModBlocks.PEDISTAL_BLOCK);
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.RAW_FLUORITE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_DEEPSLATE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.MAGIC_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_STAIRS))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_SLAB))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_FENCE))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_FENCE_GATE))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_WALL))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_DOOR))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_TRAPDOOR))
+                .add(ModBlocks.getRK(ModBlocks.PEDISTAL_BLOCK));
 
-        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.FLUORITE_ORE)
-                .add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FLUORITE_DEEPSLATE_ORE));
 
-        valueLookupBuilder(BlockTags.STAIRS).add(ModBlocks.FLUORITE_STAIRS);
-        valueLookupBuilder(BlockTags.SLABS).add(ModBlocks.FLUORITE_SLAB) ;
-        valueLookupBuilder(BlockTags.BUTTONS).add(ModBlocks.FLUORITE_BUTTON) ;
-        valueLookupBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.FLUORITE_PRESSURE_PLATE) ;
+        tag(BlockTags.STAIRS).add(ModBlocks.getRK(ModBlocks.FLUORITE_STAIRS));
+        tag(BlockTags.SLABS).add(ModBlocks.getRK(ModBlocks.FLUORITE_SLAB));
+        tag(BlockTags.BUTTONS).add(ModBlocks.getRK(ModBlocks.FLUORITE_BUTTON));
+        tag(BlockTags.PRESSURE_PLATES).add(ModBlocks.getRK(ModBlocks.FLUORITE_PRESSURE_PLATE));
 
-        valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.FLUORITE_FENCE) ;
-        valueLookupBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE) ;
-        valueLookupBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL) ;
+        tag(BlockTags.FENCES).add(ModBlocks.getRK(ModBlocks.FLUORITE_FENCE));
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.getRK(ModBlocks.FLUORITE_FENCE_GATE));
+        tag(BlockTags.WALLS).add(ModBlocks.getRK(ModBlocks.FLUORITE_WALL));
 
-        valueLookupBuilder(BlockTags.DOORS).add(ModBlocks.FLUORITE_DOOR) ;
-        valueLookupBuilder(BlockTags.TRAPDOORS).add(ModBlocks.FLUORITE_TRAPDOOR);
+        tag(BlockTags.DOORS).add(ModBlocks.getRK(ModBlocks.FLUORITE_DOOR));
+        tag(BlockTags.TRAPDOORS).add(ModBlocks.getRK(ModBlocks.FLUORITE_TRAPDOOR));
 
-        valueLookupBuilder(ModTags.Blocks.NEEDS_FLUORITE_TOOL)
-                .add(ModBlocks.MAGIC_BLOCK)
+        tag(ModTags.Blocks.NEEDS_FLUORITE_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.MAGIC_BLOCK))
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
-        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_FLUORITE_TOOL)
-                .add(Blocks.OBSIDIAN)
-                .add(Blocks.CRYING_OBSIDIAN)
-                .add(Blocks.NETHERITE_BLOCK)
-                .add(Blocks.RESPAWN_ANCHOR)
-                .add(Blocks.ANCIENT_DEBRIS);
+        tag(ModTags.Blocks.INCORRECT_FOR_FLUORITE_TOOL)
+                .add(ModBlocks.getRK(Blocks.OBSIDIAN))
+                .add(ModBlocks.getRK(Blocks.CRYING_OBSIDIAN))
+                .add(ModBlocks.getRK(Blocks.NETHERITE_BLOCK))
+                .add(ModBlocks.getRK(Blocks.RESPAWN_ANCHOR))
+                .add(ModBlocks.getRK(Blocks.ANCIENT_DEBRIS));
     }
 }

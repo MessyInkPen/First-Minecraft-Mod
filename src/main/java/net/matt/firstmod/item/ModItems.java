@@ -52,12 +52,6 @@ public class ModItems {
             properties -> new Item(properties.spear(ModToolMaterials.FLUORITE, 0.95f, 0.95f, 0.6f,
                     2.3f, 11.0f, 6.75f, 5.1f, 11.25f, 4.6f)));
 
-    private static Item registerItem(String name, Function<Item.Properties, Item> function){
-        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name),
-                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name)))));
-    }
-
-
     public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorType.HELMET)));
 
@@ -79,7 +73,15 @@ public class ModItems {
     public static final Item SCULKBEAM_STAFF = registerItem("sculkbeam_staff",
             properties -> new BowItem(properties.stacksTo(1)));
 
+    public static ResourceKey<Item> getRIK(Item item){
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
+
+    private static Item registerItem(String name, Function<Item.Properties, Item> function){
+        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name),
+                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name)))));
+    }
 
     public static void registerModItems() {
         FirstMod.LOGGER.info("Registering Mod items for " + FirstMod.MOD_ID);

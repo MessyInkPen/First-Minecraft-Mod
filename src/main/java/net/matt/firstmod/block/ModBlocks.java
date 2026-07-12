@@ -86,6 +86,10 @@ public class ModBlocks {
     public static final Block PEDISTAL_BLOCK = registerBlock("pedestal",
                 properties -> new PedestalBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
+    public static ResourceKey<Block> getRK (Block block){
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
+
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FirstMod.MOD_ID, name))));
         registerBlockItem(name, toRegister, tooltips);
