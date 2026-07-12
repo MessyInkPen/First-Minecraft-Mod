@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "group": "fluorite",
   "ingredients": [
     "firstmod:raw_fluorite_block"

@@ -59,5 +59,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(Blocks.NETHERITE_BLOCK))
                 .add(ModBlocks.getRK(Blocks.RESPAWN_ANCHOR))
                 .add(ModBlocks.getRK(Blocks.ANCIENT_DEBRIS));
+
+        tag(BlockTags.CROPS).add(ModBlocks.getRK(ModBlocks.STRAWBERRY_CROP));
     }
 }

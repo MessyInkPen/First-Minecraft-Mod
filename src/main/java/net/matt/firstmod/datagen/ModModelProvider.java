@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.block.custom.FluoriteLampBlock;
+import net.matt.firstmod.block.custom.StrawberryCropBlock;
 import net.matt.firstmod.data.ModDataComponents;
 import net.matt.firstmod.item.ModArmorMaterials;
 import net.matt.firstmod.item.ModItems;
@@ -60,6 +61,9 @@ public class ModModelProvider extends FabricModelProvider{
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOffIdentifier)).build()))));
 
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.PEDISTAL_BLOCK);
+
+        blockModelGenerators.createCropBlock(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3, 4, 5);
+
     }
 
     @Override

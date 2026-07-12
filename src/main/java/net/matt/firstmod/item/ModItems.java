@@ -2,6 +2,7 @@ package net.matt.firstmod.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.matt.firstmod.FirstMod;
+import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.food.ModFoods;
 import net.matt.firstmod.item.custom.ChiselItem;
 import net.minecraft.core.Registry;
@@ -72,6 +73,12 @@ public class ModItems {
 
     public static final Item SCULKBEAM_STAFF = registerItem("sculkbeam_staff",
             properties -> new BowItem(properties.stacksTo(1)));
+
+    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
+            properties -> new BlockItem(ModBlocks.STRAWBERRY_CROP, properties.useItemDescriptionPrefix()));
+
+
+
 
     public static ResourceKey<Item> getRIK(Item item){
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

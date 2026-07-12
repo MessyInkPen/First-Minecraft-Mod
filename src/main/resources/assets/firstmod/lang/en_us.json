@@ -16,6 +16,8 @@
   "item.firstmod.kaupen_bow": "Kaupen Bow",
   "item.firstmod.sculkbeam_staff": "Sculkbeam Staff",
 
+  "item.firstmod.strawberry_seeds": "Strawberry Seeds",
+
   "item.firstmod.fluorite_helmet": "Fluorite Helmet",
   "item.firstmod.fluorite_chestplate": "Fluorite Chestplate",
   "item.firstmod.fluorite_leggings": "Fluorite Leggings",
@@ -48,6 +50,8 @@
 
   "block.firstmod.fluorite_lamp": "Fluorite Lamp",
   "block.firstmod.pedestal": "Pedestal",
+
+  "block.firstmod.strawberry_crop": "Strawberry Crop",
 
   "creativemodetab.firstmod.mod_items": "Mod Items",
 
