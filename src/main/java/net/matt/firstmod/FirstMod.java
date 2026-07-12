@@ -6,6 +6,7 @@ import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.creativemodetab.ModCreativeModeTabs;
 import net.matt.firstmod.data.ModDataComponents;
 import net.matt.firstmod.item.ModItems;
+import net.matt.firstmod.registries.ModCompostable;
 import net.matt.firstmod.registries.ModFuels;
 import net.matt.firstmod.stat.ModStats;
 import org.slf4j.Logger;
@@ -21,6 +22,7 @@ public class FirstMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModFuels.registerFuels();
+		ModCompostable.registerCompostable();
 		ModDataComponents.registerDataComponents();
 		ModStats.registerStats();
 	}
