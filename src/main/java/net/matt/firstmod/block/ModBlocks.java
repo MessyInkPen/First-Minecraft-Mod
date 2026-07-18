@@ -1,10 +1,7 @@
 package net.matt.firstmod.block;
 
 import net.matt.firstmod.FirstMod;
-import net.matt.firstmod.block.custom.FluoriteLampBlock;
-import net.matt.firstmod.block.custom.MagicBlock;
-import net.matt.firstmod.block.custom.PedestalBlock;
-import net.matt.firstmod.block.custom.StrawberryCropBlock;
+import net.matt.firstmod.block.custom.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -90,6 +87,10 @@ public class ModBlocks {
     public static final Block STRAWBERRY_CROP = registerBlockWithoutBlockItem("strawberry_crop",
                     properties -> new StrawberryCropBlock(properties.noCollision().randomTicks().instabreak().sound(SoundType.CROP)
                             .pushReaction(PushReaction.DESTROY)));
+
+    public static final Block HONEY_BERRY_BUSH = registerBlockWithoutBlockItem("honey_berry_bush",
+            properties -> new HoneyBerryBushBlock(properties.randomTicks().noCollision().sound(SoundType.SWEET_BERRY_BUSH)
+                    .pushReaction(PushReaction.DESTROY)));
 
     public static ResourceKey<Block> getRK (Block block){
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();

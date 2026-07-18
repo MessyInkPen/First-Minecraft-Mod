@@ -13,7 +13,10 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -32,6 +35,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
     @Override
     public void generate() {
+        var enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         dropSelf(ModBlocks.FLUORITE_BLOCK);
         dropSelf(ModBlocks.RAW_FLUORITE_BLOCK);
 
@@ -57,6 +61,24 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         this.add(ModBlocks.STRAWBERRY_CROP, this.createCropDrops(ModBlocks.STRAWBERRY_CROP, ModItems.STRAWBERRY, ModItems.STRAWBERRY_SEEDS,
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, StrawberryCropBlock.MAX_AGE))));
+
+        this.add(ModBlocks.HONEY_BERRY_BUSH, (block) -> (LootTable.Builder) this.applyExplosionDecay(block,
+                LootTable.lootTable().withPool(LootPool.lootPool()
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.HONEY_BERRY_BUSH)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(SweetBerryBushBlock.AGE, 3)))
+                        .add(LootItem.lootTableItem(ModItems.HONEY_BERRIES)).apply(SetItemCountFunction
+                                .setCount(UniformGenerator.between(2.0F, 3.0F))).apply(ApplyBonusCount
+                                .addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE))))
+                        .withPool(LootPool.lootPool().when(LootItemBlockStatePropertyCondition
+                                .hasBlockStateProperties(ModBlocks.HONEY_BERRY_BUSH)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(SweetBerryBushBlock.AGE, 2)))
+                                .add(LootItem.lootTableItem(ModItems.HONEY_BERRIES))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(enchantments
+                                        .getOrThrow(Enchantments.FORTUNE))))));
+
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {
