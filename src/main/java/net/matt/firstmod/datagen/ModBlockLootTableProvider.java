@@ -3,6 +3,7 @@ package net.matt.firstmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.matt.firstmod.block.ModBlocks;
+import net.matt.firstmod.block.custom.RiceCropBlock;
 import net.matt.firstmod.block.custom.StrawberryCropBlock;
 import net.matt.firstmod.item.ModItems;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
@@ -79,6 +80,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                                 .apply(ApplyBonusCount.addUniformBonusCount(enchantments
                                         .getOrThrow(Enchantments.FORTUNE))))));
 
+
+        this.add(ModBlocks.RICE_CROP, this.createCropDrops(ModBlocks.RICE_CROP, ModItems.RICE_SHOOT, ModItems.RICE_SHOOT,
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RICE_CROP)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, RiceCropBlock.MAX_AGE))));
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {

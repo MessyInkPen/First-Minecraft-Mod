@@ -53,6 +53,7 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.PEDISTAL_BLOCK);
                        output.accept(ModItems.STRAWBERRY_SEEDS);
                        output.accept(ModItems.HONEY_BERRIES);
+                       output.accept(ModItems.RICE_SHOOT);
                     }).build());
 
 

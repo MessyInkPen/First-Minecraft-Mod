@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.block.custom.FluoriteLampBlock;
 import net.matt.firstmod.block.custom.HoneyBerryBushBlock;
+import net.matt.firstmod.block.custom.RiceCropBlock;
 import net.matt.firstmod.block.custom.StrawberryCropBlock;
 import net.matt.firstmod.data.ModDataComponents;
 import net.matt.firstmod.item.ModArmorMaterials;
@@ -67,6 +68,8 @@ public class ModModelProvider extends FabricModelProvider{
 
         blockModelGenerators.createCrossBlock(ModBlocks.HONEY_BERRY_BUSH, BlockModelGenerators.PlantType.NOT_TINTED,
                 HoneyBerryBushBlock.AGE, 0, 1, 2, 3);
+
+        blockModelGenerators.createCropBlock(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
     }
 
     @Override

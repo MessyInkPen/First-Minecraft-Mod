@@ -18,6 +18,7 @@
 
   "item.firstmod.strawberry_seeds": "Strawberry Seeds",
   "item.firstmod.honey_berries": "Honey Berries",
+  "item.firstmod.rice_shoot": "Rice Shoot",
 
   "item.firstmod.fluorite_helmet": "Fluorite Helmet",
   "item.firstmod.fluorite_chestplate": "Fluorite Chestplate",
@@ -54,6 +55,7 @@
 
   "block.firstmod.strawberry_crop": "Strawberry Crop",
   "block.firstmod.honey_berry_bush": "Honey Berry Bush",
+  "block.firstmod.rice_crop": "Rice Crop",
 
   "creativemodetab.firstmod.mod_items": "Mod Items",
 

@@ -81,6 +81,9 @@ public class ModItems {
             properties -> new BlockItem(ModBlocks.HONEY_BERRY_BUSH,
                     properties.useItemDescriptionPrefix().food(ModFoods.HONEY_BERRIES)));
 
+    public static final Item RICE_SHOOT = registerItem("rice_shoot",
+            properties -> new PlaceOnWaterBlockItem(ModBlocks.RICE_CROP, properties.useItemDescriptionPrefix()));
+
 
 
 
