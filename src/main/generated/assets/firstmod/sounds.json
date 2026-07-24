@@ -1,4 +1,13 @@
 {
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "firstmod:bar_brawl",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.firstmod.bar_brawl"
+  },
   "chisel_use": {
     "sounds": [
       "firstmod:chisel_use"

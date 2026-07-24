@@ -33,8 +33,10 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.HEAD_ARMOR).add(ModItems.getRIK(ModItems.FLUORITE_HELMET));
         tag(ItemTags.CHEST_ARMOR).add(ModItems.getRIK(ModItems.FLUORITE_CHESTPLATE));
         tag(ItemTags.LEG_ARMOR).add(ModItems.getRIK(ModItems.FLUORITE_LEGGINGS));
-
         tag(ItemTags.FOOT_ARMOR).add(ModItems.getRIK(ModItems.FLUORITE_BOOTS));
+
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.getRIK(ModItems.KAUPEN_BOW));
+
+        tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(ModItems.getRIK(ModItems.BAR_BRAWL_MUSIC_DISC));
     }
 }

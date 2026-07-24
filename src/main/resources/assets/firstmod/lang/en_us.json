@@ -20,6 +20,10 @@
   "item.firstmod.honey_berries": "Honey Berries",
   "item.firstmod.rice_shoot": "Rice Shoot",
 
+  "item.firstmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+
+  "jukebox_song.firstmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
+
   "item.firstmod.fluorite_helmet": "Fluorite Helmet",
   "item.firstmod.fluorite_chestplate": "Fluorite Chestplate",
   "item.firstmod.fluorite_leggings": "Fluorite Leggings",
@@ -50,6 +54,7 @@
 
   "stat.firstmod.chisel_used": "Blocks Chiseled",
   "sounds.firstmod.chisel_use": "Using Chisel",
+  "subtitles.firstmod.bar_brawl": "Bar Brawl Playing",
 
   "block.firstmod.fluorite_lamp": "Fluorite Lamp",
   "block.firstmod.pedestal": "Pedestal",

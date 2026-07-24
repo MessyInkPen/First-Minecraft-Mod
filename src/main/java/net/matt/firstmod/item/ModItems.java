@@ -3,6 +3,7 @@ package net.matt.firstmod.item;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.matt.firstmod.FirstMod;
 import net.matt.firstmod.block.ModBlocks;
+import net.matt.firstmod.datagen.ModJukeboxSongs;
 import net.matt.firstmod.food.ModFoods;
 import net.matt.firstmod.item.custom.ChiselItem;
 import net.minecraft.core.Registry;
@@ -84,7 +85,8 @@ public class ModItems {
     public static final Item RICE_SHOOT = registerItem("rice_shoot",
             properties -> new PlaceOnWaterBlockItem(ModBlocks.RICE_CROP, properties.useItemDescriptionPrefix()));
 
-
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            properties -> new Item(properties.jukeboxPlayable(ModJukeboxSongs.BAR_BRAWL_KEY).stacksTo(1).rarity(Rarity.UNCOMMON)));
 
 
     public static ResourceKey<Item> getRIK(Item item){
