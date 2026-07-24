@@ -52,6 +52,9 @@
   "painting.firstmod.saw_them.title": "Saw Them",
   "painting.firstmod.saw_them.author": "NanoAttack",
 
+  "effect.firstmod.stinky": "Stinky",
+  "effect.firstmod.stinky.description": "Causes entities around you to take damage",
+
   "stat.firstmod.chisel_used": "Blocks Chiseled",
   "sounds.firstmod.chisel_use": "Using Chisel",
   "subtitles.firstmod.bar_brawl": "Bar Brawl Playing",

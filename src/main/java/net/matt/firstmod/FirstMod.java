@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.creativemodetab.ModCreativeModeTabs;
 import net.matt.firstmod.data.ModDataComponents;
+import net.matt.firstmod.effect.ModEffects;
 import net.matt.firstmod.item.ModItems;
 import net.matt.firstmod.registries.ModCompostable;
 import net.matt.firstmod.registries.ModFuels;
@@ -25,6 +26,7 @@ public class FirstMod implements ModInitializer {
 		ModFuels.registerFuels();
 		ModCompostable.registerCompostable();
 		ModSounds.registerSounds();
+		ModEffects.registerEffects();
 		ModDataComponents.registerDataComponents();
 		ModStats.registerStats();
 	}
