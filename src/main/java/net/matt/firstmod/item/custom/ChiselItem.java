@@ -2,9 +2,11 @@ package net.matt.firstmod.item.custom;
 
 import net.matt.firstmod.block.ModBlocks;
 import net.matt.firstmod.data.ModDataComponents;
+import net.matt.firstmod.sound.ModSounds;
 import net.matt.firstmod.stat.ModStats;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -51,7 +53,9 @@ public class ChiselItem extends Item {
         if (CHISEL_MAP.containsKey(clickedBlock) && !level.isClientSide()){
             // We are on the Server!
             level.setBlockAndUpdate(context.getClickedPos(), CHISEL_MAP.get(clickedBlock).defaultBlockState());
-             context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
+            context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
+            level.playSound(null, context.getClickedPos(), ModSounds.CHISEL_USE, SoundSource.BLOCKS, 2.0F,
+                    0.8F + level.getRandom().nextFloat() * 0.4F);
 
              context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
              context.getPlayer().awardStat(ModStats.CHISSEL_USED_STAT, 1);

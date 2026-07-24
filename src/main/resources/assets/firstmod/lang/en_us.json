@@ -49,6 +49,7 @@
   "painting.firstmod.saw_them.author": "NanoAttack",
 
   "stat.firstmod.chisel_used": "Blocks Chiseled",
+  "sounds.firstmod.chisel_use": "Using Chisel",
 
   "block.firstmod.fluorite_lamp": "Fluorite Lamp",
   "block.firstmod.pedestal": "Pedestal",
